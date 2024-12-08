@@ -40,3 +40,20 @@ Repo.get(User,1) / BananaBank.Repo.get(BananaBank.Users.User,1)
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+## Comandos Github:
+Push to other branch:
+git checkout -b nome-da-nova-branch     # Cria e troca para o novo branch
+git add .                               # Adiciona as modificações
+git commit -m "Descrição das modificações"  # Faz o commit
+git push origin nome-da-nova-branch     # Envia para o repositório remoto
+
+Merge with branch "Main" : 
+git checkout main               # Muda para a branch main
+git pull origin main             # Atualiza a main com as últimas mudanças remotas
+git merge nome-da-nova-branch   # Faz o merge da sua branch de trabalho na main
+git push origin main             # Envia as alterações para o repositório remoto
+
+Cancel the last commit, but keep the changes: git reset --soft HEAD~1
+Cancel the last commit and erasing the changes: git reset --hard HEAD~1
+Cancel git add: git reset
