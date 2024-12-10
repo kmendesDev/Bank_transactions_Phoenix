@@ -6,6 +6,7 @@ defmodule BananaBank.Users.User do
 
   @required_params [:name, :password, :email, :cep]
 
+  @derive {Jason.Encoder, only: [:name, :id, :email, :cep]}
   schema "users" do #mapeamento dos dados
     field :name, :string
     field :password, :string, virtual: true

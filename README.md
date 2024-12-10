@@ -1,9 +1,9 @@
-# BananaBank
+* # BananaBank
 
 API that creates an internal system of financial transactions 
 
 
-## Terminal commands used:
+* ## Terminal commands used:
   * mix archive.install hex phx_new - Install phoenix
   * brew install postgresql@17 - Install postgresql version 17
   * mix phx.new banana_bank --no-assets --no-html --no-mailer --no-gettext - creates a new phoenix project with no assets, no html views, no swoosh mail files and no gettext files(used when we use more than one language at the project)
@@ -33,7 +33,7 @@ Repo.get(User,1) / BananaBank.Repo.get(BananaBank.Users.User,1)
     change(changeset, %{password_hash: password_hash})
   end
 
-## Learn more
+* ## Learn more
 
   * Official website: https://www.phoenixframework.org/
   * Guides: https://hexdocs.pm/phoenix/overview.html
@@ -41,7 +41,7 @@ Repo.get(User,1) / BananaBank.Repo.get(BananaBank.Users.User,1)
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
 
-## Comandos Github:
+* ## Comandos Github:
 Push to other branch:
 git checkout -b nome-da-nova-branch     # Cria e troca para o novo branch
 git add .                               # Adiciona as modificações
@@ -57,3 +57,18 @@ git push origin main             # Envia as alterações para o repositório rem
 Cancel the last commit, but keep the changes: git reset --soft HEAD~1
 Cancel the last commit and erasing the changes: git reset --hard HEAD~1
 Cancel git add: git reset
+
+* maneiras de tratar erros:
+
+  defp handle_response({:ok, user},conn) do
+    conn
+    |> put_status(:created)
+    |> render(:create, user: user)
+  end
+
+  defp handle_response({:error, changeset},conn) do
+    conn
+    |> put_status(:bad_request)
+    |> put_view(json: BananaBankWeb.ErrorJSON)
+    |> render(:error, changeset: changeset)
+  end
