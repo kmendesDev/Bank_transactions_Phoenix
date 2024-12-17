@@ -97,3 +97,8 @@ params = %{
 	"cep" => "12",
 	"password" => "1234"
 }
+
+* Creating table with migration
+mix ecto.gen.migration add_accounts_table
+Após criar o banco:
+mix ecto.migrate ou mix ecto.reset
