@@ -7,10 +7,10 @@ defmodule BananaBankWeb.UserControllerTest do # Conn case - usa sandbox, dps faz
     test "sucessfully creates an user", %{conn: conn} do
 
       params = %{
-        name: "Jhonny",
-        cep: "09876098",
-        email: "jhow@bb.com",
-        password: "098765"
+        "name" => "Jhonny",
+        "cep" => "09876098",
+        "email" => "jhow@bb.com",
+        "password" => "098765"
       }
       response =
         conn
@@ -25,10 +25,10 @@ defmodule BananaBankWeb.UserControllerTest do # Conn case - usa sandbox, dps faz
     test "With invalid params, returns an error", %{conn: conn} do
 
       params = %{
-        name: "Jhonny",
-        cep: "09876098",
-        email: "jhow@bb.com",
-        password: " "
+        "name" => "Jhonny",
+        "cep" => "09876098",
+        "email" => "jhow@bb.com",
+        "password" => " "
       }
       response =
         conn
@@ -42,10 +42,10 @@ defmodule BananaBankWeb.UserControllerTest do # Conn case - usa sandbox, dps faz
     test "sucessfully deletes an user", %{conn: conn} do
 
       params = %{   # Pesquisar a lib exmachina
-        name: "Jhonny",
-        cep: "09876098",
-        email: "jhow@bb.com",
-        password: "098765"
+        "name" => "Jhonny",
+        "cep" => "09876098",
+        "email" => "jhow@bb.com",
+        "password" => "098765"
       }
 
       {:ok, user} = Users.create(params)
