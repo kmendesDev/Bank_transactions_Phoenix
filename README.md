@@ -72,3 +72,28 @@ Cancel git add: git reset
     |> put_view(json: BananaBankWeb.ErrorJSON)
     |> render(:error, changeset: changeset)
   end
+
+  * Teste do ViaCep:
+  {
+  "cep": "71015-082",
+  "logradouro": "Quadra QI 16 Bloco H",
+  "complemento": "",
+  "unidade": "",
+  "bairro": "Guará I",
+  "localidade": "Brasília",
+  "uf": "DF",
+  "estado": "Distrito Federal",
+  "regiao": "Centro-Oeste",
+  "ibge": "5300108",
+  "gia": "",
+  "ddd": "61",
+  "siafi": "9701"
+}
+
+* Teste create user:
+params = %{
+	"name" => "Kaioshow",
+	"email" => "joao@teste.com",
+	"cep" => "12",
+	"password" => "1234"
+}
