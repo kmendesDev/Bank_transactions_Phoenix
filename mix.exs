@@ -39,10 +39,15 @@ defmodule BananaBank.MixProject do
       {:phoenix_live_dashboard, "~> 0.8.3"},
       {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"},
-      {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
-      {:argon2_elixir, "~> 4.1"}
+      {:argon2_elixir, "~> 4.1"},
+           # or latest version
+      {:tesla, "~> 1.11"},
+    # optional, required by JSON middleware
+      {:jason, "~> 1.4"},
+    # optional, required by Mint adapter, recommended
+      {:mint, "~> 1.0"}
     ]
   end
 
