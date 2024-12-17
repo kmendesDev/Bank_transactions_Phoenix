@@ -48,7 +48,8 @@ defmodule BananaBank.MixProject do
       {:jason, "~> 1.4"},
     # optional, required by Mint adapter, recommended
       {:mint, "~> 1.0"},
-      {:bypass, "~> 2.1", only: :test}
+      {:bypass, "~> 2.1", only: :test},
+      {:mox, "~> 1.0", only: :test}
     ]
   end
 
