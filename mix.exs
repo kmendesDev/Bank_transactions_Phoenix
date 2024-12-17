@@ -47,7 +47,8 @@ defmodule BananaBank.MixProject do
     # optional, required by JSON middleware
       {:jason, "~> 1.4"},
     # optional, required by Mint adapter, recommended
-      {:mint, "~> 1.0"}
+      {:mint, "~> 1.0"},
+      {:bypass, "~> 2.1", only: :test}
     ]
   end
 
