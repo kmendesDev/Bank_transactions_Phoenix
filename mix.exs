@@ -49,7 +49,8 @@ defmodule BananaBank.MixProject do
     # optional, required by Mint adapter, recommended
       {:mint, "~> 1.0"},
       {:bypass, "~> 2.1", only: :test},
-      {:mox, "~> 1.0", only: :test}
+      {:mox, "~> 1.0", only: :test},
+      {:decimal, "~> 2.0"}
     ]
   end
 

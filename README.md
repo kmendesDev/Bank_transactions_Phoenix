@@ -102,3 +102,6 @@ params = %{
 mix ecto.gen.migration add_accounts_table
 Após criar o banco:
 mix ecto.migrate ou mix ecto.reset
+
+* Creating the unique constraint
+mix ecto.gen.migration add_unique_constraint_to_accounts
