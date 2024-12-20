@@ -108,3 +108,6 @@ mix ecto.gen.migration add_unique_constraint_to_accounts
 
 * Operações monetárias:
 Sempre usando a lib decimal
+
+* Ecto Multi
+Serve para rodar transações. É atômico. Ou acontece todos os passos ou não acontece nenhum
